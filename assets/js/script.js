@@ -67,6 +67,8 @@ $(function() {
 		}
 	});
 
+    
+
 	$('#infinity').each(count);
 
 	function count(options) {

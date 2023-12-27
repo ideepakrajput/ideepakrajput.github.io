@@ -22,6 +22,7 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
 
     <!-- Favicon
     ================================================== -->
@@ -36,6 +37,14 @@
     <!-- Custom styles for this template -->
     <link href="assets/css/style.css" rel="stylesheet">
     <link href="assets/css/responsive.css" rel="stylesheet">
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init("cAIhU5B7A_fiRwrVa");
+        })();
+    </script>
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
@@ -232,9 +241,9 @@
                 <div class="row">
                     <div class="col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-1.jpg" class="img-res" alt="">
+                            <img src="assets/img/project/project-image01.png" class="img-res" alt="">
                             <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
+                                <h4>Share Your Secrets</h4>
                                 <a href="#" data-toggle="modal" data-target="#portfolioItem1"><span
                                         class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="#"><span class="glyphicon glyphicon-link"></span></a>
@@ -243,9 +252,9 @@
                     </div>
                     <div class="col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-2.jpg" class="img-res" alt="">
+                            <img src="assets/img/project/project-image02.png" class="img-res" alt="">
                             <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
+                                <h4>Advanced To Do</h4>
                                 <a href="#" data-toggle="modal" data-target="#portfolioItem2"><span
                                         class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="#"><span class="glyphicon glyphicon-link"></span></a>
@@ -254,9 +263,9 @@
                     </div>
                     <div class="col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-3.jpg" class="img-res" alt="">
+                            <img src="assets/img/project/project-image03.png" class="img-res" alt="">
                             <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
+                                <h4>Daily Journal</h4>
                                 <a href="#" data-toggle="modal" data-target="#portfolioItem3"><span
                                         class="glyphicon glyphicon-eye-open"></span></a>
                                 <a href="#"><span class="glyphicon glyphicon-link"></span></a>
@@ -265,23 +274,25 @@
                     </div>
                     <div class="col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-4.jpg" class="img-res" alt="">
+                            <img src="assets/img/project/project-image04.png" class="img-res" alt="">
                             <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem4"><span
-                                        class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                                <h4>Travel Goals</h4>
+                                <a href="https://todolist-deepak.onrender.com/" data-toggle="modal"
+                                    data-target="#portfolioItem4"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://github.com/ideepakrajput/ToDoList"><span
+                                        class="glyphicon glyphicon-link"></span></a>
                             </div><!-- /.portfolio-item-info -->
                         </div><!-- /.portfolio-item -->
                     </div>
                     <div class="col-md-4 col-xs-6">
                         <div class="portfolio-item">
-                            <img src="assets/img/portfolio-5.jpg" class="img-res" alt="">
+                            <img src="assets/img/project/portfolio-5.png" class="img-res" alt="">
                             <div class="portfolio-item-info">
-                                <h4>Project Title</h4>
-                                <a href="#" data-toggle="modal" data-target="#portfolioItem5"><span
-                                        class="glyphicon glyphicon-eye-open"></span></a>
-                                <a href="#"><span class="glyphicon glyphicon-link"></span></a>
+                                <h4>Sure Improvement</h4>
+                                <a href="https://sureimprovement.github.io/" data-toggle="modal"
+                                    data-target="#portfolioItem5"><span class="glyphicon glyphicon-eye-open"></span></a>
+                                <a href="https://github.com/sureimprovement/sureimprovement.github.io"><span
+                                        class="glyphicon glyphicon-link"></span></a>
                             </div><!-- /.portfolio-item-info -->
                         </div><!-- /.portfolio-item -->
                     </div>
@@ -324,7 +335,7 @@
 
                 <h3>Contact</h3>
                 <img src="assets/img/lines.svg" class="img-lines" alt="lines">
-                <form>
+                <form onsubmit="sendEmail(event)" id="contact-form">
                     <div class="row">
                         <div class="col-sm-6">
                             <input type="text" name="name" class="form-control mt-x-0" placeholder="Name" required>
@@ -349,13 +360,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-4 col-xs-12">
-                    <a class="icon facebook-bg" href="#"><i class="icon-facebook"></i></a>
-                    <a class="icon twitter-bg" href="#"><i class="icon-twitter"></i></a>
-                    <a class="icon gplus-bg" href="#"><i class="icon-linkedin"></i></a>
-                    <a class="icon linkedin-bg" href="#"><i class="icon-gplus"></i></a>
+                    <a class="icon" href="https://twitter.com/ideepakrajput/"><i class="bi bi-twitter-x"></i></a>
+                    <a class="icon" href="https://linkedin.com/in/ideepakrajput/"><i class="bi bi-linkedin"></i></a>
+                    <a class="icon" href="https://github.com/ideepakrajput"><i class="bi bi-github"></i></i></a>
+                    <a class="icon" href="tel:+917254880990"><i class="bi bi-phone"></i></i></a>
+                    <a class="icon" href="mailto:contact.deepakrajput@gmail.com"><i
+                            class="bi bi-envelope-arrow-up"></i></a>
                 </div>
                 <div class="col-sm-4 col-sm-offset-0 col-xs-6 col-xs-offset-3">
-                    <p class="copyright">2017. All Rights Reserved</p>
                 </div>
                 <div class="col-sm-4 col-xs-3">
                     <div class="text-right page-scroll">
@@ -516,7 +528,25 @@
         src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-progressbar/0.9.0/bootstrap-progressbar.min.js"></script>
     <script src="assets/js/jquery.countTo.min.js"></script>
     <script src="assets/js/script.js"></script>
-
+    <script>
+        function sendEmail(event) {
+            event.preventDefault();
+            const form = document.getElementById('contact-form');
+            const templateParams = {
+                to_name: "Deepak",
+                from_name: `${form.elements['name'].value} | ${form.elements['email'].value}`,
+                message: form.elements['message'].value
+            };
+            emailjs.send("service_d222x39", "template_a7ke6gf", templateParams)
+                .then(function (response) {
+                    alert("We will work together. Thanks for your time !");
+                    // Optionally, you can reset the form after successful submission
+                    form.reset();
+                }, function (error) {
+                    console.error("Email failed to send:", error);
+                });
+        }
+    </script>
 </body>
 
 </html>
