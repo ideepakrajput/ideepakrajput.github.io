@@ -20,6 +20,11 @@
 		height: 500px;
 	}
 
+	.deepak {
+		z-index: 1;
+		position: relative;
+	}
+
 	/* SITEMAIN
 	================================================== */
 	/* Modal */
@@ -68,6 +73,11 @@
 
 	.hero img {
 		height: 420px;
+	}
+
+	.deepak {
+		z-index: 1;
+		position: relative;
 	}
 
 	/* SITEMAIN
@@ -312,6 +322,11 @@
 
 	.hero img {
 		height: 360px
+	}
+
+	.deepak {
+		z-index: 1;
+		position: relative;
 	}
 
 	/* SITEMAIN

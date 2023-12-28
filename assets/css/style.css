@@ -285,7 +285,7 @@ body {
 ================================================== */
 .site-main {
     position: relative;
-    margin-bottom: 100px;
+    margin-bottom: 10px;
     background-color: #fff;
     z-index: 1;
 }
@@ -472,8 +472,6 @@ body {
 
 .modal-header {
     position: relative;
-    padding: 0;
-    height: 500px;
 }
 
 .modal-header .close {
