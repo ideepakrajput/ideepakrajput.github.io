@@ -195,7 +195,7 @@ body {
 }
 
 .site-logo img {
-    padding-bottom: 2px;
+    width: 100px;
 }
 
 /* Navigation */
@@ -292,7 +292,7 @@ body {
 
 /* site-section */
 .site-section {
-    padding-top: 120px;
+    padding-top: 60px;
 }
 
 .site-section h2,
@@ -312,7 +312,7 @@ body {
 
 /* Section: Skills */
 .section-skills {
-    padding-bottom: 120px;
+    padding-bottom: 20px;
 }
 
 .skill+.skill {
@@ -340,7 +340,7 @@ body {
 /* Section: Services */
 .section-services {
     position: relative;
-    padding-top: 220px;
+    padding-top: 60px;
 }
 
 .section-services:before {
@@ -365,7 +365,7 @@ body {
 }
 
 .section-services .container {
-    padding: 120px 100px;
+    padding: 60px 40px;
     position: relative;
     background-color: #fff;
     box-shadow: 0px 0px 40px 8px rgba(0, 0, 0, 0.2);
@@ -373,7 +373,7 @@ body {
 }
 
 .service h4 {
-    margin: 25px 0;
+    margin: 20px 0;
     font-size: 24px;
     font-weight: 700;
 }
@@ -381,6 +381,7 @@ body {
 .service p {
     color: #000;
     margin-bottom: 0;
+    text-align: justify;
 }
 
 /* Section: Portfolio */
@@ -540,10 +541,6 @@ body {
     line-height: 0.8;
 }
 
-/* Section: Form*/
-.section-form {
-    /* padding-bottom: 120px; */
-}
 
 .section-form .btn {
     margin-top: 40px;
@@ -610,4 +607,72 @@ a.icon-up-bg:hover {
     line-height: 40px;
     color: #fff;
     text-align: center;
+}
+
+/* //Timeline */
+.timeline-wrapper {
+    position: relative;
+    padding: 22px 10px;
+}
+
+.timeline-wrapper:last-child:before {
+    height: 0;
+}
+
+.timeline-wrapper:last-child {
+    margin-bottom: 40px;
+}
+
+.timeline-wrapper:before {
+    content: "";
+    background: #474559;
+    width: 3px;
+    height: 100%;
+    position: absolute;
+    left: 48px;
+}
+
+.timeline-yr {
+    background: #474559;
+    border-radius: 100%;
+    position: absolute;
+    width: 75px;
+    height: 75px;
+    line-height: 75px;
+    text-align: center;
+}
+
+.timeline-yr span {
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    display: block;
+    line-height: 75px;
+}
+
+.timeline-info {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 6em;
+}
+
+.timeline-info small {
+    color: #474559;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 15px;
+}
+
+.timeline-info h5 {
+    font-size: 20px;
+    font-weight: bold;
+    vertical-align: middle;
+}
+
+.timeline-info h4 {
+    font-size: 16px;
+    font-weight: bold;
+    vertical-align: middle;
 }
