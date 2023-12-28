@@ -310,10 +310,6 @@ body {
     margin-bottom: 35px;
 }
 
-/* Section: Skills */
-.section-skills {
-    padding-bottom: 20px;
-}
 
 .skill+.skill {
     margin-top: 50px;
@@ -612,7 +608,7 @@ a.icon-up-bg:hover {
 /* //Timeline */
 .timeline-wrapper {
     position: relative;
-    padding: 22px 10px;
+    padding: 10px 10px;
 }
 
 .timeline-wrapper:last-child:before {
@@ -662,7 +658,6 @@ a.icon-up-bg:hover {
     font-weight: bold;
     display: inline-block;
     vertical-align: middle;
-    margin-left: 15px;
 }
 
 .timeline-info h5 {
