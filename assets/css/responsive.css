@@ -332,7 +332,7 @@
 	/* SITEMAIN
 	================================================== */
 	.site-main {
-		margin-bottom: 140px;
+		margin-bottom: 20px;
 	}
 
 	/* site-section */
@@ -341,8 +341,7 @@
 	}
 
 	.section-skills,
-	.section-portfolio,
-	.section-form {
+	.section-portfolio {
 		padding-bottom: 60px;
 	}
 
