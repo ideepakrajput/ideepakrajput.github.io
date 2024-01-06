@@ -138,8 +138,8 @@ h4 {
 }
 
 textarea {
-    margin-top: 40px;
-    min-height: 200px;
+    margin-top: 10px;
+    min-height: 100px;
     resize: none;
 }
 
@@ -565,7 +565,8 @@ body {
 }
 
 .icon:hover {
-    background-color: #fff;
+    background-color: #f7f3f3;
+    color: #ffc200;
 }
 
 .site-footer a {
@@ -576,25 +577,6 @@ body {
     -ms-transition: color 0.25s ease-in-out, background-color 0.25s ease-in-out;
 }
 
-a.twitter-bg:hover {
-    color: #55acee;
-}
-
-a.facebook-bg:hover {
-    color: #3b5998;
-}
-
-a.gplus-bg:hover {
-    color: #007bb5;
-}
-
-a.linkedin-bg:hover {
-    color: #dd4b39;
-}
-
-a.icon-up-bg:hover {
-    color: #212121;
-}
 
 .copyright {
     margin-bottom: 0;
@@ -668,4 +650,82 @@ a.icon-up-bg:hover {
     font-size: 16px;
     font-weight: bold;
     vertical-align: middle;
+}
+
+.contact-form {
+    position: relative;
+}
+
+.contact-form .form-control {
+    background: transparent;
+    border-radius: 2px;
+    outline: none;
+    box-shadow: none;
+    font-weight: bold;
+    margin: 16px 0;
+}
+
+.contact-form .form-control:not(textarea) {
+    height: 48px;
+}
+
+.contact-form .form-control:hover,
+.contact-form .form-control:focus {
+    border-color: #ffc200;
+}
+
+.contact-form .submit-btn {
+    background: #ffc200;
+    border-radius: 50px;
+    color: #ffffff;
+    font-weight: bold;
+    border: 0;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.contact-form .submit-btn:hover {
+    background: #474559;
+}
+
+.contact-info {
+    background: #474559;
+    border-radius: 20px;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info p,
+.contact-info a {
+    color: #f7f3f3;
+    margin-bottom: 0;
+}
+
+.contact-info-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    text-align: left;
+}
+
+.contact-info-item h3 {
+    margin-bottom: auto;
+}
+
+.social-links {
+    color: #f7f3f3;
+    font-size: 20px;
+    display: block;
+    list-style-type: none;
+}
+
+.social-links ul {
+    margin-top: 20px !important;
+}
+
+.social-links a:hover,
+.contact-info-item a:hover {
+    color: #ffc200;
 }
