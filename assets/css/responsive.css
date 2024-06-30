@@ -31,6 +31,10 @@
 	.modal-header {
 		height: 400px;
 	}
+	
+	.skills-icons img{
+        padding: 5px 5px;
+    }
 }
 
 /* Medium Devices, Desktops */
@@ -142,6 +146,10 @@
 	.modal-header {
 		height: 350px;
 	}
+
+	.skills-icons img{
+        padding: 5px 5px;
+    }
 }
 
 /* Small Devices, Tablets */
@@ -411,6 +419,10 @@
 	.site-footer .col-xs-12 {
 		text-align: center;
 	}
+
+	.skills-icons img{
+        padding: 5px 5px;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -473,4 +485,7 @@
 	.site-footer .col-xs-offset-3 {
 		margin-left: 0;
 	}
+	.skills-icons img{
+        padding: 5px 5px;
+    }
 }
