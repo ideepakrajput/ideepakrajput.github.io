@@ -653,24 +653,25 @@
                 });
 
                 if (response) {
-                    alert('Message sent successfully! Deepak will get back to you soon.');
+                    
                     document.getElementById('contactForm').reset();
                     const trustpilot_invitation = {
                         recipientEmail: email,
                         recipientName: name,
                         referenceId: `Portfolio_Contact_${Date.now()}`, // Add unique identifier
-                        source: 'ContactFormSubmission',
-                        locale: 'en-US' // Add locale
+                        source: 'InvitationScript'
                     };
         
                     // Wait for Trustpilot script to load
-                    if (window.tp) {
-                        window.tp('createInvitation', trustpilot_invitation);
+                    if (tp) {
+                        tp('createInvitation', trustpilot_invitation);
+                        alert('Message sent successfully! Deepak will get back to you soon.');
                     }
                     throw new Error('Failed to send message');
                 }
             } catch (error) {
                 alert('Failed to send message. Please try again or contact directly via call or email.');
+                console.log(error);
             } finally {
                 submitBtn.disabled = false;
                 submitBtn.innerHTML = 'Send Message';
