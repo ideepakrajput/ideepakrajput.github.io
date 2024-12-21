@@ -656,13 +656,17 @@
                     alert('Message sent successfully! Deepak will get back to you soon.');
                     document.getElementById('contactForm').reset();
                     const trustpilot_invitation = {
-                    recipientEmail: email,
-                    recipientName: name,
-                    referenceId: 'Portfolio_Contact',
-                    source: 'ContactFormSubmission',
-                };
-                tp('createInvitation', trustpilot_invitation);
-                } else {
+                        recipientEmail: email,
+                        recipientName: name,
+                        referenceId: `Portfolio_Contact_${Date.now()}`, // Add unique identifier
+                        source: 'ContactFormSubmission',
+                        locale: 'en-US' // Add locale
+                    };
+        
+                    // Wait for Trustpilot script to load
+                    if (window.tp) {
+                        window.tp('createInvitation', trustpilot_invitation);
+                    }
                     throw new Error('Failed to send message');
                 }
             } catch (error) {
