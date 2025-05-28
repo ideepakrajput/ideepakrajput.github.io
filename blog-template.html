@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- Favicon -->
+        <link rel="icon" type="image/png" href="../assets/img/favicon.png" />
+        <link rel="apple-touch-icon" href="../assets/img/favicon.png" />
+
+        <!-- Primary Meta Tags -->
+        <title>{{BLOG_TITLE}} | Deepak Kumar</title>
+        <meta
+            name="google-site-verification"
+            content="Pu9PqvbJLcdWV-lVfAlpilXUduovaYbtHG12lVzbdjk"
+        />
+
+        <!-- SEO Meta Tags -->
+        <meta name="title" content="{{BLOG_TITLE}} | Deepak Kumar" />
+        <meta name="description" content="{{BLOG_DESCRIPTION}}" />
+        <meta name="keywords" content="{{BLOG_KEYWORDS}}" />
+        <meta name="author" content="Deepak Kumar" />
+        <meta name="robots" content="index, follow" />
+        <meta name="language" content="English" />
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="article" />
+        <meta
+            property="og:url"
+            content="https://ideepakrajput.tech/blogs/{{BLOG_SLUG}}"
+        />
+        <meta property="og:title" content="{{BLOG_TITLE}}" />
+        <meta property="og:description" content="{{BLOG_DESCRIPTION}}" />
+        <meta property="og:image" content="../assets/img/{{BLOG_IMAGE}}" />
+        <meta property="article:author" content="Deepak Kumar" />
+        <meta property="article:published_time" content="{{PUBLISH_DATE}}" />
+        <meta property="article:modified_time" content="{{MODIFIED_DATE}}" />
+        <meta property="article:section" content="{{BLOG_CATEGORY}}" />
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta
+            property="twitter:url"
+            content="https://ideepakrajput.tech/blogs/{{BLOG_SLUG}}"
+        />
+        <meta property="twitter:title" content="{{BLOG_TITLE}}" />
+        <meta property="twitter:description" content="{{BLOG_DESCRIPTION}}" />
+        <meta property="twitter:image" content="../assets/img/{{BLOG_IMAGE}}" />
+
+        <!-- Theme Color -->
+        <meta name="theme-color" content="#1F2937" />
+
+        <!-- Schema.org JSON-LD -->
+        <script type="application/ld+json">
+            {
+                "@context": "https://schema.org",
+                "@type": "BlogPosting",
+                "headline": "{{BLOG_TITLE}}",
+                "description": "{{BLOG_DESCRIPTION}}",
+                "image": "https://ideepakrajput.tech/assets/img/{{BLOG_IMAGE}}",
+                "author": {
+                    "@type": "Person",
+                    "name": "Deepak Kumar",
+                    "url": "https://ideepakrajput.tech"
+                },
+                "publisher": {
+                    "@type": "Person",
+                    "name": "Deepak Kumar",
+                    "logo": {
+                        "@type": "ImageObject",
+                        "url": "https://ideepakrajput.tech/assets/img/DEEPAK.webp"
+                    }
+                },
+                "datePublished": "{{PUBLISH_DATE}}",
+                "dateModified": "{{MODIFIED_DATE}}",
+                "mainEntityOfPage": {
+                    "@type": "WebPage",
+                    "@id": "https://ideepakrajput.tech/blogs/{{BLOG_SLUG}}"
+                }
+            }
+        </script>
+
+        <!-- Styles -->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css"
+        />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+        <style>
+            .sidebar-sticky {
+                position: sticky;
+                top: 100px;
+            }
+
+            .content-menu a.active {
+                color: #3b82f6;
+                border-left: 3px solid #3b82f6;
+                padding-left: 0.75rem;
+            }
+
+            .blog-content h2 {
+                scroll-margin-top: 100px;
+            }
+
+            .blog-content h3 {
+                scroll-margin-top: 100px;
+            }
+
+            pre[class*="language-"] {
+                border-radius: 0.5rem;
+                margin: 1rem 0;
+            }
+
+            .related-blog-card {
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .related-blog-card:hover {
+                transform: translateY(-4px);
+                box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            }
+        </style>
+    </head>
+
+    <body class="bg-gray-900 text-gray-100">
+        <!-- Navigation -->
+        <nav class="fixed w-full bg-gray-800 shadow-lg z-50">
+            <div class="container mx-auto px-6 py-3">
+                <div class="flex items-center justify-between">
+                    <div class="flex items-center space-x-4">
+                        <img
+                            src="../assets/img/DEEPAK.webp"
+                            alt="Deepak Kumar"
+                            class="rounded-full w-10 h-10 object-cover shadow-lg"
+                        />
+                        <div class="text-2xl font-bold text-blue-400">
+                            <a href="../index.html">Deepak Kumar</a>
+                        </div>
+                    </div>
+                    <!-- Hamburger Menu Button -->
+                    <button
+                        id="menu-btn"
+                        class="md:hidden text-gray-300 hover:text-blue-400 focus:outline-none"
+                    >
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                    <!-- Desktop Menu -->
+                    <div class="hidden md:flex space-x-8">
+                        <a
+                            href="../index.html#hero"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Home</a
+                        >
+                        <a
+                            href="../index.html#about"
+                            class="text-gray-300 hover:text-blue-400"
+                            >About</a
+                        >
+                        <a
+                            href="../index.html#skills"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Skills</a
+                        >
+                        <a
+                            href="../index.html#experience"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Experience</a
+                        >
+                        <a
+                            href="../index.html#services"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Services</a
+                        >
+                        <a
+                            href="../index.html#contact"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Contact</a
+                        >
+                        <a
+                            href="/blogs"
+                            class="text-blue-400 border-b-2 border-blue-400"
+                            >Blog</a
+                        >
+                    </div>
+                </div>
+                <!-- Mobile Menu -->
+                <div id="mobile-menu" class="md:hidden hidden">
+                    <div class="flex flex-col space-y-4 mt-4 pb-4">
+                        <a
+                            href="../index.html#hero"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Home</a
+                        >
+                        <a
+                            href="../index.html#about"
+                            class="text-gray-300 hover:text-blue-400"
+                            >About</a
+                        >
+                        <a
+                            href="../index.html#skills"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Skills</a
+                        >
+                        <a
+                            href="../index.html#experience"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Experience</a
+                        >
+                        <a
+                            href="../index.html#services"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Services</a
+                        >
+                        <a
+                            href="../index.html#contact"
+                            class="text-gray-300 hover:text-blue-400"
+                            >Contact</a
+                        >
+                        <a href="/blogs" class="text-blue-400">Blog</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Blog Header -->
+        <section class="pt-24 pb-4 bg-gradient-to-r from-gray-800 to-gray-900">
+            <div class="container mx-auto px-6">
+                <div class="max-w-4xl mx-auto text-center">
+                    <div
+                        class="flex items-center justify-center space-x-4 mb-6"
+                    >
+                        <span
+                            class="bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold"
+                        >
+                            <i class="{{CATEGORY_ICON}} mr-2"></i
+                            >{{BLOG_CATEGORY}}
+                        </span>
+                    </div>
+                    <h1
+                        class="text-2xl md:text-4xl font-bold mb-6 bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent"
+                    >
+                        {{BLOG_TITLE}}
+                    </h1>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="py-12">
+            <div class="container mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-4 gap-8">
+                    <!-- Sidebar - Table of Contents -->
+                    <div class="lg:col-span-1">
+                        <div class="sidebar-sticky">
+                            <div class="bg-gray-800 rounded-lg p-6 mb-8">
+                                <h3
+                                    class="text-xl font-bold mb-4 text-blue-400"
+                                >
+                                    <i class="fas fa-list mr-2"></i>Table of
+                                    Contents
+                                </h3>
+                                <nav
+                                    class="content-menu space-y-2"
+                                    id="table-of-contents"
+                                >
+                                    <!-- Table of contents will be generated dynamically -->
+                                    {{TABLE_OF_CONTENTS}}
+                                </nav>
+                            </div>
+
+                            <!-- Share Section -->
+                            <div class="bg-gray-800 rounded-lg p-6">
+                                <h3
+                                    class="text-xl font-bold mb-4 text-blue-400"
+                                >
+                                    <i class="fas fa-share-alt mr-2"></i>Share
+                                    This Post
+                                </h3>
+                                <div class="flex space-x-3">
+                                    <a
+                                        href="#"
+                                        class="bg-blue-600 hover:bg-blue-700 text-white p-3 rounded-lg transition-colors"
+                                    >
+                                        <i class="fab fa-twitter"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="bg-blue-800 hover:bg-blue-900 text-white p-3 rounded-lg transition-colors"
+                                    >
+                                        <i class="fab fa-linkedin"></i>
+                                    </a>
+                                    <a
+                                        href="#"
+                                        class="bg-gray-600 hover:bg-gray-700 text-white p-3 rounded-lg transition-colors"
+                                    >
+                                        <i class="fas fa-link"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Article Content -->
+                    <div class="lg:col-span-2">
+                        <article
+                            class="bg-gray-800 rounded-lg p-8 blog-content"
+                        >
+                            <!-- Blog Content Goes Here -->
+                            {{BLOG_CONTENT}}
+
+                            <!-- Author Bio -->
+                            <section class="bg-gray-700 rounded-lg p-6 mt-12">
+                                <div class="flex items-center space-x-4 mb-4">
+                                    <img
+                                        src="../assets/img/DEEPAK.webp"
+                                        alt="Deepak Kumar"
+                                        class="w-16 h-16 rounded-full object-cover"
+                                    />
+                                    <div>
+                                        <h3
+                                            class="text-xl font-semibold text-blue-400"
+                                        >
+                                            Deepak Kumar
+                                        </h3>
+                                        <p class="text-gray-300">
+                                            Full Stack Developer & DevOps
+                                            Enthusiast
+                                        </p>
+                                    </div>
+                                </div>
+                                <p class="text-gray-300 mb-4">
+                                    Deepak is a passionate full-stack developer
+                                    specializing in MERN stack, React Native,
+                                    and DevOps practices. With years of
+                                    experience in building scalable
+                                    applications, he loves sharing knowledge
+                                    about development best practices and version
+                                    control workflows.
+                                </p>
+                                <div class="flex space-x-4">
+                                    <a
+                                        href="https://github.com/ideepakrajput"
+                                        target="_blank"
+                                        class="text-gray-400 hover:text-blue-400"
+                                    >
+                                        <i class="fab fa-github text-xl"></i>
+                                    </a>
+                                    <a
+                                        href="https://linkedin.com/in/ideepakrajput"
+                                        target="_blank"
+                                        class="text-gray-400 hover:text-blue-400"
+                                    >
+                                        <i class="fab fa-linkedin text-xl"></i>
+                                    </a>
+                                    <a
+                                        href="https://twitter.com/ideepakrajput"
+                                        target="_blank"
+                                        class="text-gray-400 hover:text-blue-400"
+                                    >
+                                        <i class="fab fa-twitter text-xl"></i>
+                                    </a>
+                                </div>
+                            </section>
+                        </article>
+                    </div>
+
+                    <!-- Right Sidebar -->
+                    <div class="lg:col-span-1">
+                        <div class="sidebar-sticky">
+                            <!-- Newsletter Signup -->
+                            <div
+                                class="bg-gradient-to-br from-blue-900 to-purple-900 rounded-lg p-6 mb-8"
+                            >
+                                <h3 class="text-xl font-bold mb-4 text-white">
+                                    <i class="fas fa-envelope mr-2"></i>Stay
+                                    Updated
+                                </h3>
+                                <p class="text-gray-200 mb-4 text-sm">
+                                    Get the latest tutorials and tips delivered
+                                    to your inbox.
+                                </p>
+                                <form class="space-y-3">
+                                    <input
+                                        type="email"
+                                        placeholder="Enter your email"
+                                        class="w-full px-3 py-2 bg-gray-800 text-white rounded-lg border border-gray-600 focus:border-blue-500 focus:outline-none"
+                                    />
+                                    <button
+                                        type="submit"
+                                        class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+                                    >
+                                        Subscribe
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Related Posts -->
+                            <div class="bg-gray-800 rounded-lg p-6 mb-8">
+                                <h3
+                                    class="text-xl font-bold mb-6 text-blue-400"
+                                >
+                                    <i class="fas fa-bookmark mr-2"></i>Related
+                                    Posts
+                                </h3>
+                                <div class="space-y-4" id="related-posts">
+                                    <!-- Related posts will be populated dynamically -->
+                                    {{RELATED_POSTS}}
+                                </div>
+                            </div>
+
+                            <!-- Popular Tags -->
+                            <div class="bg-gray-800 rounded-lg p-6">
+                                <h3
+                                    class="text-xl font-bold mb-4 text-blue-400"
+                                >
+                                    <i class="fas fa-tags mr-2"></i>Popular Tags
+                                </h3>
+                                <div class="flex flex-wrap gap-2">
+                                    <span
+                                        class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        Git
+                                    </span>
+                                    <span
+                                        class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        React
+                                    </span>
+                                    <span
+                                        class="bg-purple-600 hover:bg-purple-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        Node.js
+                                    </span>
+                                    <span
+                                        class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        JavaScript
+                                    </span>
+                                    <span
+                                        class="bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        DevOps
+                                    </span>
+                                    <span
+                                        class="bg-indigo-600 hover:bg-indigo-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        MongoDB
+                                    </span>
+                                    <span
+                                        class="bg-pink-600 hover:bg-pink-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        Express
+                                    </span>
+                                    <span
+                                        class="bg-teal-600 hover:bg-teal-700 text-white px-3 py-1 rounded-full text-xs cursor-pointer transition-colors"
+                                    >
+                                        Docker
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- JavaScript for Mobile Menu and Table of Contents -->
+        <script>
+            // Mobile menu toggle
+            document
+                .getElementById("menu-btn")
+                .addEventListener("click", function () {
+                    const mobileMenu = document.getElementById("mobile-menu");
+                    mobileMenu.classList.toggle("hidden");
+                });
+
+            // Auto-generate table of contents
+            function generateTableOfContents() {
+                const headings = document.querySelectorAll(
+                    ".blog-content h2, .blog-content h3"
+                );
+                const tocContainer =
+                    document.getElementById("table-of-contents");
+
+                if (headings.length === 0) return;
+
+                let tocHTML = "";
+                headings.forEach((heading, index) => {
+                    const id = heading.id || `heading-${index}`;
+                    if (!heading.id) heading.id = id;
+
+                    const level = heading.tagName === "H2" ? "" : "ml-4";
+                    tocHTML += `
+                                                <a href="#${id}" 
+                                                   class="block text-gray-300 hover:text-blue-400 py-1 border-l-3 border-transparent hover:border-blue-400 pl-3 transition-all ${level}">
+                                                    ${heading.textContent}
+                                                </a>
+                                            `;
+                });
+
+                tocContainer.innerHTML = tocHTML;
+            }
+
+            // Highlight active section in TOC
+            function highlightActiveSection() {
+                const headings = document.querySelectorAll(
+                    ".blog-content h2, .blog-content h3"
+                );
+                const tocLinks = document.querySelectorAll(".content-menu a");
+
+                window.addEventListener("scroll", () => {
+                    let current = "";
+                    headings.forEach((heading) => {
+                        const rect = heading.getBoundingClientRect();
+                        if (rect.top <= 150) {
+                            current = heading.id;
+                        }
+                    });
+
+                    tocLinks.forEach((link) => {
+                        link.classList.remove("active");
+                        if (link.getAttribute("href") === `#${current}`) {
+                            link.classList.add("active");
+                        }
+                    });
+                });
+            }
+
+            // Initialize when DOM is loaded
+            document.addEventListener("DOMContentLoaded", function () {
+                generateTableOfContents();
+                highlightActiveSection();
+            });
+        </script>
+    </body>
+</html>

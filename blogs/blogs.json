@@ -1,0 +1,26 @@
+{
+    "blogs": [
+        {
+            "id": 1,
+            "title": "Want to Backdate a Git Commit on GitHub?",
+            "description": "Learn how to create backdated Git commits with step-by-step guide. Master Git date manipulation, commit history editing, and best practices for version control.",
+            "excerpt": "Have you ever found yourself in a situation where you needed to commit code with a specific date in the past? Maybe you forgot to commit your work from last week, or you're organizing your project history for better documentation.",
+            "url": "./backdated-commit.html",
+            "category": "Git & Version Control",
+            "tags": [
+                "Git",
+                "Version Control",
+                "GitHub",
+                "Commands",
+                "Tutorial"
+            ],
+            "publishDate": "2025-05-28T10:00:00+00:00",
+            "modifiedDate": "2025-05-28T10:00:00+00:00",
+            "readTime": "12 min read",
+            "image": "../assets/img/blog-git-backdated.webp",
+            "author": "Deepak Kumar",
+            "featured": true,
+            "slug": "backdated-git-commits"
+        }
+    ]
+}
