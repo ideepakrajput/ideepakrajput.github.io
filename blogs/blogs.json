@@ -1,6 +1,28 @@
 {
     "blogs": [
         {
+            "id": 2,
+            "title": "Hostinger VPS Hosting Review 2025: Get 50% OFF KVM Plans + Performance Guide",
+            "description": "Complete Hostinger VPS hosting review 2025. Get exclusive 50% discount on KVM VPS plans. Compare features, performance benchmarks, and pricing. Use code IDEEPAKRAJPUT for maximum savings.",
+            "excerpt": "After extensive testing and analysis, Hostinger's KVM VPS hosting stands out as one of the best value propositions in the market. Whether you're launching a new project, hosting a high-traffic website, or need a robust development environment, Hostinger's VPS delivers exceptional performance at competitive prices.",
+            "url": "./hostinger-vps-hosting-50-percent-discount-review-2025.html",
+            "category": "Web Hosting",
+            "tags": [
+                "VPS Hosting",
+                "Hostinger",
+                "KVM",
+                "Server",
+                "Review"
+            ],
+            "publishDate": "2025-06-17T00:00:00+00:00",
+            "modifiedDate": "2025-06-17T00:00:00+00:00",
+            "readTime": "15 min read",
+            "image": "../assets/img/blog-hostinger-vps.webp",
+            "author": "Deepak Kumar",
+            "featured": true,
+            "slug": "hostinger-vps-hosting-review"
+        },
+        {
             "id": 1,
             "title": "Want to Backdate a Git Commit on GitHub?",
             "description": "Learn how to create backdated Git commits with step-by-step guide. Master Git date manipulation, commit history editing, and best practices for version control.",
